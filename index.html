@@ -14,6 +14,7 @@
             --border: #222222;
         }
 
+        /* %50 Küçültülmüş Font ve Keskin Köşeler */
         * { margin: 0; padding: 0; box-sizing: border-box; border-radius: 0 !important; font-size: 13px; }
 
         body { 
@@ -31,6 +32,7 @@
             overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.6);
         }
 
+        /* Üst Bar */
         header { 
             grid-column: 1 / -1; padding: 15px 30px; border-bottom: 1px solid var(--border); 
             display: flex; justify-content: space-between; align-items: center;
@@ -41,13 +43,17 @@
         .brand { font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-size: 12px;}
         .brand-logo { width: 24px; height: 24px; background: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 16px; }
 
-        .restore-panel { padding: 50px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; }
+        /* Sol Panel: ClassicTube Özellikleri */
+        .restore-panel { padding: 50px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; overflow-y: auto;}
         
         .restore-panel .pre-title { color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;}
-        h1 { font-size: 32px; font-weight: 900; margin-bottom: 15px; letter-spacing: -1.5px; line-height: 1.1;}
-        .main-tagline { font-style: italic; color: #ccc; font-size: 11px; margin-bottom: 10px;}
-        .philosophy { color: var(--primary-red); font-size: 10px; margin-bottom: 30px; line-height: 1.6; font-weight: 500;}
+        h1 { font-size: 32px; font-weight: 900; margin-bottom: 20px; letter-spacing: -1.5px; line-height: 1.1;}
+        .main-tagline { font-style: italic; color: #ccc; font-size: 11px; margin-bottom: 30px;}
+        
+        /* Felsefi Manifesto Bölümü */
+        .philosophy { color: var(--primary-red); font-size: 11px; margin-bottom: 40px; line-height: 1.6; font-weight: 500; font-family: monospace; }
 
+        /* Mağaza Linki Butonu */
         .get-extension-btn {
             display: inline-block; background: transparent; color: var(--text-main); border: 1px solid var(--primary-red);
             padding: 12px 24px; text-decoration: none; font-weight: bold; text-transform: uppercase;
@@ -55,90 +61,11 @@
         }
         .get-extension-btn:hover { background: var(--primary-red); color: white;}
 
-        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;}
         .feature-card { border: 1px solid #222; padding: 20px; background: rgba(255,255,255,0.01); }
         .feature-card h3 { font-size: 10px; color: var(--primary-red); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1.2px; }
         .feature-card p { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
 
-        .vision-panel { padding: 40px 30px; background-color: #0d0d0d; display: flex; flex-direction: column; }
-        .titan-section h2 { font-size: 14px; margin-bottom: 15px; border-left: 3px solid var(--primary-red); padding-left: 12px; text-transform: uppercase; letter-spacing: 1px; }
-        
-        .titan-section p { font-size: 11px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
-        .titan-section .vision-tagline { color: var(--primary-red); font-style: italic; font-size: 11px; margin-bottom: 20px;}
-        
-        .impact-list { list-style: none; margin: 15px 0 25px 0; }
-        .impact-list li { font-size: 10px; color: #ccc; margin-bottom: 8px; padding-left: 15px; position: relative; }
-        .impact-list li::before { content: "›"; position: absolute; left: 0; color: var(--primary-red); font-size: 12px;}
-
-        .support-section { margin-top: auto; padding-top: 25px; border-top: 1px solid var(--border); }
-        .support-section p { font-size: 10px; margin-bottom: 15px; color: var(--text-muted); }
-        .donate-btn { 
-            display: block; background: var(--primary-red); color: white; text-decoration: none; 
-            text-align: center; padding: 16px; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 1.2px;
-        }
-        .donate-btn:hover { background: white; color: var(--primary-red); }
-
-        footer { grid-column: 1 / -1; padding: 15px 30px; border-top: 1px solid var(--border); text-align: center; font-size: 10px; color: #444; text-transform: uppercase; letter-spacing: 1px;}
-        .contact-link { color: #777; text-decoration: none; }
-
-        @media (max-width: 850px) {
-            .master-hub { grid-template-columns: 1fr; }
-            .restore-panel { border-right: none; border-bottom: 1px solid var(--border); }
-        }
-    </style>
-</head>
-<body>
-
-<div class="master-hub">
-    <header>
-        <div class="brand">
-            <div class="brand-logo">C</div>
-            <span>ClassicTube v1.0</span>
-        </div>
-        <div class="free-badge">100% Free • Ad-Free • Privacy First</div>
-    </header>
-
-    <main class="restore-panel">
-        <span class="pre-title">Digital Restoration</span>
-        <h1>Focus Reclaimed.</h1>
-        <p class="main-tagline">"Simplicity is the ultimate sophistication."</p>
-        <p class="philosophy">İnternetin altın çağı olan 2000’li yılların estetik kodlarını, bugünün hızıyla birleştiriyoruz. Bu bir nostalji değil, dijital bir restorasyondur.</p>
-        
-        <a href="https://chromewebstore.google.com/detail/YOUR_ID" class="get-extension-btn">Get the Extension</a>
-        
-        <div class="feature-grid">
-            <div class="feature-card"><h3>Shorts Purge</h3><p>Instantly erases vertical Shorts clutter from your environment.</p></div>
-            <div class="feature-card"><h3>Zero Chat</h3><p>Suppresses live-feed noise and sidebar distractions by default.</p></div>
-            <div class="feature-card"><h3>Sharp UI</h3><p>Restores legacy aesthetic codes. No modern rounded corners.</p></div>
-            <div class="feature-card"><h3>Feed Logic</h3><p>Terminates algorithm-driven category chips for pure focus.</p></div>
-        </div>
-    </main>
-
-    <aside class="vision-panel">
-        <div class="titan-section">
-            <h2>The TITAN Project</h2>
-            <p class="vision-tagline">"The past is just waiting to be redesigned."</p>
-            <p>TITAN is a cinematic manga-animation odyssey; a visionary exploration where ancestral forces converge with futuristic machinery and technology.</p>
-            <p>In the year 2599, high above the clouds of a reconstructed world, humanity exists alongside advanced machines and ancient spirits.</p>
-            
-            <h2 style="margin-top: 25px; border-color: #444;">Fuel the Vision</h2>
-            <ul class="impact-list">
-                <li>Bringing characters like <b>JD, Gesar, Ellon,</b> and <b>Manas</b> to life.</li>
-                <li>Visual and technical R&D of the 2599 world-building.</li>
-                <li>Sustaining an independent, futuristic anime vision.</li>
-            </ul>
-        </div>
-
-        <div class="support-section">
-            <p>ClassicTube is free. If you find value in this tool, consider supporting the visual research.</p>
-            <a href="YOUR_PAYTR_LINK" class="donate-btn">Support the Research</a>
-        </div>
-    </aside>
-
-    <footer>
-        Inquiries: <a href="mailto:support@classictube.io" class="contact-link">support@classictube.io</a> | © 2026 ClassicTube & TITAN Project
-    </footer>
-</div>
-
-</body>
-</html>
+        /* Sağ Panel: TITAN Vizyonu */
+        .vision-panel { padding: 40px 30px; background-color: #0d0d0d; display: flex; flex-direction: column; overflow-y: auto; }
+        .titan-section h2 { font-size: 14px; margin-bottom: 15px; border-left: 3px solid var(--primary-red); padding-left: 12px;
