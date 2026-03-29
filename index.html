@@ -3,135 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassicTube | Restore Your Focus. Rebuild the Future.</title>
+    <title>ClassicTube | Restore Your Focus</title>
     <style>
         :root {
-            --primary-red: #E50914; /* Modern, Netflix style red */
+            --primary-red: #E50914;
             --bg-dark: #0A0A0A;
-            --bg-panel: #141414;
+            --bg-panel: #121212;
             --text-main: #FFFFFF;
-            --text-muted: #A0A0A0;
-            --border: #2A2A2A;
-            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --text-muted: #888888;
+            --border: #222222;
         }
 
-        /* Reset & Sharp Corners (No Radius) */
-        * { margin: 0; padding: 0; box-sizing: border-box; border-radius: 0 !important; }
+        /* %50 Küçültülmüş Font ve Keskin Köşeler */
+        * { margin: 0; padding: 0; box-sizing: border-box; border-radius: 0 !important; font-size: 13px; }
 
         body { 
             background-color: var(--bg-dark); 
             color: var(--text-main); 
-            font-family: var(--font-main); 
-            line-height: 1.6; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            min-height: 100vh;
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            display: flex; align-items: center; justify-content: center; min-height: 100vh;
         }
 
-        /* Compact & Professional Hub Structure */
         .master-hub { 
-            width: 100%; 
-            max-width: 1280px; 
-            height: 85vh; 
-            background-color: var(--bg-panel); 
-            border: 1px solid var(--border); 
-            display: grid; 
-            grid-template-columns: 1fr 380px; 
-            grid-template-rows: auto 1fr auto;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            width: 90vw; max-width: 1000px; background-color: var(--bg-panel); 
+            border: 1px solid var(--border); display: grid; 
+            grid-template-columns: 1fr 320px; grid-template-rows: auto 1fr;
             overflow: hidden;
         }
 
-        /* Global Header */
+        /* Üst Bar: %100 ÜCRETSİZ İfadesi En Üstte */
         header { 
-            grid-column: 1 / -1; 
-            padding: 20px 30px; 
-            border-bottom: 1px solid var(--border); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            background-color: rgba(20,20,20,0.95);
+            grid-column: 1 / -1; padding: 12px 20px; border-bottom: 1px solid var(--border); 
+            display: flex; justify-content: space-between; align-items: center;
+            background: #1a1a1a;
         }
-        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
-        .brand-logo { width: 35px; height: 35px; background-color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 22px; color: white; }
-        .status-badge { font-size: 0.7rem; color: #4CAF50; border: 1px solid #4CAF50; padding: 4px 10px; text-transform: uppercase; }
+        .free-badge { color: #4CAF50; font-weight: bold; font-size: 11px; letter-spacing: 1px; }
 
-        /* Left Section: ClassicTube Detailed */
-        .restore-panel { 
-            padding: 60px; 
-            border-right: 1px solid var(--border); 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center;
-            overflow-y: auto;
+        .brand { font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+        .brand-logo { width: 24px; height: 24px; background: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+
+        /* Sol Panel: ClassicTube Özellikleri */
+        .restore-panel { padding: 30px; border-right: 1px solid var(--border); }
+        h1 { font-size: 24px; font-weight: 900; margin-bottom: 15px; letter-spacing: -1px; }
+        
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .feature-card { border: 1px solid #222; padding: 15px; background: rgba(255,255,255,0.02); }
+        .feature-card h3 { font-size: 11px; color: var(--primary-red); text-transform: uppercase; margin-bottom: 5px; }
+        .feature-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+        /* Sağ Panel: TITAN Vizyonu (Kısaltılmış) */
+        .vision-panel { padding: 30px; background-color: #0d0d0d; display: flex; flex-direction: column; }
+        .titan-section h2 { font-size: 14px; margin-bottom: 10px; border-left: 2px solid var(--primary-red); padding-left: 10px; }
+        .titan-section p { font-size: 11px; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px; }
+        
+        .characters { font-family: monospace; color: var(--primary-red); font-size: 10px; margin-top: 5px; font-weight: bold; }
+
+        /* Destek Bölümü */
+        .support-section { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); }
+        .support-section p { font-size: 10px; margin-bottom: 15px; color: var(--text-muted); }
+        .donate-btn { 
+            display: block; background: var(--primary-red); color: white; text-decoration: none; 
+            text-align: center; padding: 12px; font-weight: bold; text-transform: uppercase; font-size: 12px;
         }
-        .pre-title { color: var(--primary-red); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 10px; }
-        h1 { font-size: 3.5rem; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; font-weight: 900; color: var(--text-main); }
-        .main-description { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px; max-width: 650px; }
+        .donate-btn:hover { background: #fff; color: var(--primary-red); }
 
-        .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .feature-card { background: rgba(255,255,255,0.03); border: 1px solid #222; padding: 25px; transition: 0.3s; }
-        .feature-card:hover { border-color: var(--primary-red); background: rgba(255,255,255,0.05); }
-        .feature-card h3 { color: var(--text-main); margin-bottom: 10px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-        .feature-card p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; }
+        footer { grid-column: 1 / -1; padding: 10px 20px; border-top: 1px solid var(--border); text-align: center; font-size: 9px; color: #444; }
 
-        /* Right Section: TITAN Vision & Community Support */
-        .vision-panel { 
-            padding: 40px; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: space-between; 
-            background-color: #0F0F0F; 
-        }
-        .titan-section h2 { font-size: 1.4rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; border-left: 3px solid var(--primary-red); padding-left: 15px; }
-        .titan-section p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px; }
-        .character-codenames { color: var(--primary-red); font-weight: bold; font-family: monospace; font-size: 1rem; margin-top: 10px; }
-
-        .support-section { 
-            text-align: center; 
-            background-color: var(--bg-panel); 
-            border: 1px solid var(--border); 
-            padding: 30px; 
-            margin-top: auto; 
-        }
-        .support-section p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px; }
-        .donate-button { 
-            display: block; 
-            background-color: var(--primary-red); 
-            color: white; 
-            text-decoration: none; 
-            padding: 18px; 
-            font-weight: 800; 
-            font-size: 1rem; 
-            text-transform: uppercase; 
-            transition: 0.2s; 
-            letter-spacing: 1px;
-        }
-        .donate-button:hover { background-color: white; color: var(--primary-red); }
-
-        /* Global Footer */
-        footer { 
-            grid-column: 1 / -1; 
-            padding: 15px 30px; 
-            border-top: 1px solid var(--border); 
-            font-size: 0.7rem; 
-            color: #555; 
-            display: flex; 
-            justify-content: space-between; 
-            text-transform: uppercase;
-        }
-        .contact-link { color: #777; text-decoration: none; transition: 0.2s; }
-        .contact-link:hover { color: var(--primary-red); }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 1000px) {
-            .master-hub { grid-template-columns: 1fr; height: auto; overflow-y: visible; }
-            body { height: auto; }
-            .restore-panel { border-right: none; border-bottom: 1px solid var(--border); padding: 40px; }
-            .feature-list { grid-template-columns: 1fr; }
-            h1 { font-size: 2.5rem; }
+        @media (max-width: 800px) {
+            .master-hub { grid-template-columns: 1fr; height: auto; }
+            .restore-panel { border-right: none; border-bottom: 1px solid var(--border); }
         }
     </style>
 </head>
@@ -141,56 +81,40 @@
     <header>
         <div class="brand">
             <div class="brand-logo">C</div>
-            <span>ClassicTube v1.0</span>
+            <span>ClassicTube</span>
         </div>
-        <div class="status-badge">System Optimized</div>
+        <div class="free-badge">100% FREE • NO ADS • NO TRACKING</div>
     </header>
 
     <main class="restore-panel">
-        <span class="pre-title">Digital Restoration Engine</span>
-        <h1>Focus Reclaimed.</h1>
-        <p class="main-description">
-            Experience YouTube without the clutter. ClassicTube is a precision-engineered extension that silences modern distractions, restoring a clean, focused viewing environment built for the golden age of video.
-        </p>
+        <h1>Restore Your Focus.</h1>
+        <p style="color:var(--text-muted); font-size: 12px;">Precision-engineered to purge modern distractions from your viewing experience.</p>
         
-        <div class="feature-list">
-            <div class="feature-card">
-                <h3>Shorts Eliminated</h3>
-                <p>Instantly scrubs all vertical Shorts videos, tabs, and shelves from your feed and sidebar.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Zero Distractions</h3>
-                <p>Suppresses live chat windows, comment sections, and irrelevant recommendation blocks by default.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Legacy Interface</h3>
-                <p>Restores classic, sharp-edged UI elements to the video player and search bar—no modern rounded corners.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Focus Feed</h3>
-                <p>Removes algorithm-driven category chips and cluttered menu items for a distraction-free exploration.</p>
-            </div>
+        <div class="feature-grid">
+            <div class="feature-card"><h3>Shorts Purge</h3><p>Instantly removes all vertical Shorts clutter from your feed.</p></div>
+            <div class="feature-card"><h3>Zero Chat</h3><p>Automated suppression of live chat and sidebar noise.</p></div>
+            <div class="feature-card"><h3>Sharp UI</h3><p>Eliminates modern rounded corners. Pure legacy aesthetic.</p></div>
+            <div class="feature-card"><h3>Clean Feed</h3><p>Termination of algorithm-driven category chips.</p></div>
         </div>
     </main>
 
     <aside class="vision-panel">
         <div class="titan-section">
             <h2>TITAN PROJECT 2599</h2>
-            <p>A cinematic vision by artist & DIT <b>Burigagarin</b>.</p>
-            <p>ClassicTube is more than an extension; it is a bridge to fuel the visual production of a futuristic-manga universe where ancient spirits meet technology in the year 2599.</p>
-            <p class="character-codenames">// JD // GESAR // ELLON // MANAS</p>
+            <p><i>"The past is just waiting to be redesigned."</i></p>
+            <p>I am <b>Burigagarin</b>. My journey at DIT stations led to this cinematic exploration: A future where ancient spirits and technology unite.</p>
+            <p>Your support directly fuels the development of this 2599 manga-animation universe.</p>
+            <div class="characters">// JD // GESAR // ELLON // MANAS</div>
         </div>
 
         <div class="support-section">
-            <p>SUPPORT INDEPENDENT DEVELOPMENT</p>
-            <a href="YOUR_PAYTR_LINK" class="donate-button">Fuel the Vision for $1</a>
-            <p style="font-size: 0.65rem; margin-top: 15px;">100% FREE. NO ADS. NO TRACKING.</p>
+            <p>If you love this tool, consider supporting the vision with a coffee.</p>
+            <a href="YOUR_PAYTR_LINK" class="donate-btn">Buy a Coffee / $1</a>
         </div>
     </aside>
 
     <footer>
-        <span>COORDINATES: ISTANBUL // 41.0082° N, 28.9784° E</span>
-        <span>DEVELOPER: <a href="mailto:support@classictube.io" class="contact-link">support@classictube.io</a></span>
+        SUPPORT & INQUIRIES: support@classictube.io | © 2026 CLASSIC TUBE & TITAN PROJECT
     </footer>
 </div>
 
