@@ -74,6 +74,12 @@
         .impact-list li { font-size: 10px; color: #ccc; margin-bottom: 6px; padding-left: 12px; position: relative; }
         .impact-list li::before { content: "›"; position: absolute; left: 0; color: var(--primary-red); }
 
+        /* Karakter Görselleri Bölümü (Kırmızı Alan) */
+        .character-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;}
+        .char-img-card { border: 1px solid #222; padding: 5px; background: var(--bg-panel); overflow: hidden;}
+        .char-img-card img { width: 100%; height: auto; display: block; filter: grayscale(100%); transition: 0.3s;}
+        .char-img-card:hover img { filter: grayscale(0%);}
+
         /* Destek Bölümü */
         .support-section { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); }
         .donate-btn { 
@@ -82,7 +88,7 @@
         }
         .donate-btn:hover { background: white; color: var(--primary-red); }
 
-        /* Alt Bilgi - Footer */
+        /* Alt Bilgi */
         .main-footer { grid-column: 1 / -1; padding: 15px 30px; border-top: 1px solid var(--border); text-align: center; font-size: 10px; color: #444; text-transform: uppercase; }
         .contact-link { color: #555; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
         .contact-link:hover { color: var(--primary-red); }
@@ -128,13 +134,21 @@
             <h2>The TITAN Project</h2>
             <p class="vision-tagline">"The past is just waiting to be redesigned."</p>
             <p>TITAN is a cinematic manga-animation odyssey set in 2599, high above the clouds of a reconstructed world.</p>
-            <p>Humanity exists alongside advanced machines and ancestral spirits in a breathtakingly fragile equilibrium.</p>
             
             <ul class="impact-list">
                 <li>Character Dev: JD, Gesar, Ellon, Manas.</li>
                 <li>Visual & Technical R&D of the 2599 world.</li>
                 <li>Sustaining an independent anime vision.</li>
             </ul>
+        </div>
+
+        <div class="character-gallery">
+            <div class="char-img-card">
+                <img src="images/Ekran Resmi 2026-03-29 18.16.33.png" alt="TITAN Scene">
+            </div>
+            <div class="char-img-card">
+                <img src="images/Gemini_Generated_Image_ofh2f3ofh2f3ofh2.png" alt="TITAN Character">
+            </div>
         </div>
 
         <div class="support-section">
