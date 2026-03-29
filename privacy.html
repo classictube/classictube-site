@@ -2,24 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy - ClassicTube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | ClassicTube</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 40px; max-width: 800px; margin: auto; color: #333; }
-        h1 { color: #cc0000; }
-        .box { border: 1px solid #eee; padding: 20px; border-radius: 5px; }
+        :root {
+            --primary-red: #E50914;
+            --bg-dark: #0A0A0A;
+            --bg-panel: #121212;
+            --text-main: #FFFFFF;
+            --text-muted: #888888;
+            --border: #222222;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; border-radius: 0 !important; font-size: 13px; }
+
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            display: flex; align-items: center; justify-content: center; min-height: 100vh;
+            padding: 20px;
+        }
+
+        .policy-container { 
+            width: 100%; max-width: 800px; background-color: var(--bg-panel); 
+            border: 1px solid var(--border); display: flex; flex-direction: column;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+        }
+
+        header { 
+            padding: 20px 40px; border-bottom: 1px solid var(--border); 
+            background: #1a1a1a; display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .brand { font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-size: 12px;}
+        .brand-logo { width: 22px; height: 22px; background: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 14px; }
+
+        .content { padding: 40px; line-height: 1.8; }
+        
+        h1 { font-size: 28px; font-weight: 900; margin-bottom: 30px; letter-spacing: -1px; text-transform: uppercase; border-left: 3px solid var(--primary-red); padding-left: 15px;}
+        h2 { font-size: 14px; color: var(--primary-red); text-transform: uppercase; margin-top: 30px; margin-bottom: 10px; letter-spacing: 1px; }
+        
+        p { color: #ccc; margin-bottom: 15px; font-size: 12px; }
+        .effective-date { color: var(--text-muted); font-size: 10px; text-transform: uppercase; margin-bottom: 40px; display: block; }
+
+        .back-home {
+            display: inline-block; margin-top: 40px; padding: 12px 25px;
+            border: 1px solid var(--border); color: var(--text-main);
+            text-decoration: none; text-transform: uppercase; font-weight: bold;
+            font-size: 11px; transition: 0.3s;
+        }
+        .back-home:hover { border-color: var(--primary-red); background: var(--primary-red); }
+
+        footer { 
+            padding: 20px 40px; border-top: 1px solid var(--border); 
+            text-align: center; font-size: 10px; color: #444; text-transform: uppercase; 
+        }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <div class="box">
-        <p><strong>Effective Date:</strong> March 29, 2026</p>
-        <p>ClassicTube does not collect, store, or share any personal user data. The extension operates entirely locally on your browser.</p>
-        <h3>1. Data Security</h3>
-        <p>No data is transmitted to external servers. All rights belong to the ClassicTube Team.</p>
-        <h3>2. Contact</h3>
-        <p>support@classictube.io</p>
-    </div>
-    <br>
-    <a href="index.html">Back to Home</a>
+
+<div class="policy-container">
+    <header>
+        <div class="brand">
+            <div class="brand-logo">C</div>
+            <span>ClassicTube</span>
+        </div>
+    </header>
+
+    <main class="content">
+        <span class="effective-date">Effective Date: March 29, 2026</span>
+        <h1>Privacy Policy</h1>
+        
+        <p>ClassicTube is built with a "Privacy First" philosophy. We believe that your digital focus should not come at the cost of your personal data.</p>
+
+        <h2>1. Data Collection</h2>
+        <p>ClassicTube does <strong>not</strong> collect, store, or share any personal user data. The extension operates entirely locally within your browser. We have no servers tracking your history, search queries, or habits.</p>
+
+        <h2>2. Data Security</h2>
+        <p>No data is transmitted to external servers. All modifications to the YouTube interface happen locally on your device. All rights and intellectual property belong to the ClassicTube Team.</p>
+
+        <h2>3. Third-Party Links</h2>
+        <p>Our website may contain links to the Chrome Web Store or support platforms. We are not responsible for the privacy practices of these external sites.</p>
+
+        <h2>4. Contact</h2>
+        <p>If you have any questions regarding this policy, you can reach us at:<br>
+        <span style="color: var(--text-main);">support@classictube.io</span></p>
+
+        <a href="index.html" class="back-home">← Back to Dashboard</a>
+    </main>
+
+    <footer>
+        © 2026 ClassicTube & TITAN Project
+    </footer>
+</div>
+
 </body>
 </html>
