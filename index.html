@@ -74,11 +74,31 @@
         .impact-list li { font-size: 10px; color: #ccc; margin-bottom: 6px; padding-left: 12px; position: relative; }
         .impact-list li::before { content: "›"; position: absolute; left: 0; color: var(--primary-red); }
 
-        /* Karakter Görselleri Bölümü (Kırmızı Alan) */
+        /* Karakter Görselleri Bölümü */
         .character-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;}
         .char-img-card { border: 1px solid #222; padding: 5px; background: var(--bg-panel); overflow: hidden;}
         .char-img-card img { width: 100%; height: auto; display: block; filter: grayscale(100%); transition: 0.3s;}
         .char-img-card:hover img { filter: grayscale(0%);}
+
+        /* Bağlantı Açıklama Kartı */
+        .connection-card {
+            border: 1px solid var(--primary-red);
+            padding: 15px;
+            background: rgba(229, 9, 20, 0.05);
+            margin-bottom: 20px;
+        }
+        .connection-card h4 {
+            font-size: 10px;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .connection-card p {
+            font-size: 10px;
+            color: #bbb;
+            line-height: 1.5;
+        }
 
         /* Destek Bölümü */
         .support-section { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); }
@@ -144,17 +164,22 @@
 
         <div class="character-gallery">
             <div class="char-img-card">
-                <img src="images/Ekran Resmi 2026-03-29 18.16.33.png" alt="TITAN Scene">
+                <img src="images/Ekran Resmi 2026-03-29 18.16.33.jpg" alt="TITAN Scene">
             </div>
             <div class="char-img-card">
-                <img src="images/Gemini_Generated_Image_ofh2f3ofh2f3ofh2.png" alt="TITAN Character">
-            </div><div class="char-img-card" style="grid-column: 1 / -1; margin-top: 10px;">
-    <img src="images/titan_city.jpg" alt="TITAN City 2599" style="height: 120px; object-fit: cover;">
-</div>
+                <img src="images/Gemini_Generated_Image_ofh2f3ofh2f3ofh2.jpg" alt="TITAN Character">
+            </div>
+            <div class="char-img-card" style="grid-column: 1 / -1; margin-top: 10px;">
+                <img src="images/titan_city.jpg" alt="TITAN City 2599" style="height: 120px; object-fit: cover;">
+            </div>
         </div>
 
         <div class="support-section">
-            <p style="font-size: 9px; margin-bottom: 10px;">If you find value in this tool, consider supporting the visual research.</p>
+            <div class="connection-card">
+                <h4>What Your Support Means</h4>
+                <p>Every bit of support for ClassicTube directly fuels the TITAN project. It empowers the visual research, world-building of 2599, and the independent animation vision of JD and Gesar. Your contribution helps us restore the digital age while creating a new cinematic future.</p>
+            </div>
+            
             <a href="YOUR_PAYTR_LINK" class="donate-btn">Support the Research</a>
         </div>
     </aside>
