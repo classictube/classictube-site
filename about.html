@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Visionary | ClassicTube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #e0e0e0;
+            --accent-color: #ff0000;
+            --secondary-bg: #0a0a0a;
+            --border-color: #222222;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 40px;
+            margin-bottom: 60px;
+        }
+
+        .label {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent-color);
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin: 0;
+            color: #fff;
+        }
+
+        .hero-text {
+            font-size: 20px;
+            color: #888;
+            margin-top: 20px;
+            max-width: 700px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            color: #bbb;
+        }
+
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-box {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            transition: border-color 0.3s ease;
+        }
+
+        .feature-box:hover {
+            border-color: var(--accent-color);
+        }
+
+        .feature-box h3 {
+            font-family: 'Space Mono', monospace;
+            color: #fff;
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .quote-block {
+            margin-top: 100px;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .main-quote {
+            font-size: 32px;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .signature {
+            font-family: 'Space Mono', monospace;
+            font-size: 16px;
+            color: var(--accent-color);
+        }
+
+        .signature span {
+            color: #666;
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 36px; }
+            .main-quote { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav style="margin-bottom: 40px;">
+        <a href="index.html">← BACK TO TERMINAL</a>
+    </nav>
+
+    <header>
+        <span class="label">Digital Restoration</span>
+        <h1>Reclaiming the Digital Focus</h1>
+        <p class="hero-text">
+            ClassicTube is not just a theme; it is a meticulous digital restoration project born out of a necessity for focus.
+        </p>
+    </header>
+
+    <section>
+        <p>
+            As a filmmaker and <strong>Digital Imaging Technician (DIT)</strong>, I spend my life ensuring visual clarity and technical precision. In the professional world of cinematography, every frame is intentional. However, the modern web has moved in the opposite direction—flooding our screens with algorithmic noise, infinite scrolls, and visual clutter designed to fragment our attention.
+        </p>
+        <p>
+            The <strong>"Shorts spiral"</strong> is a real phenomenon. We’ve all been there: waking up from a 30-minute loop of vertical videos only to realize we don’t remember a single second of what we just consumed. This is where the idea for ClassicTube was born.
+        </p>
+    </section>
+
+    <section>
+        <h2>The Mission: Beyond Nostalgia</h2>
+        <p>
+            While ClassicTube brings back the beloved sharp-edged, square aesthetic of the early 2000s, this is not merely about nostalgia. It is about <strong>functionality</strong>.
+        </p>
+
+        <div class="grid">
+            <div class="feature-box">
+                <h3>Algorithmic Detox</h3>
+                <p style="font-size: 15px;">By stripping away Shorts, live chats, and forced categories, we return the power of choice to the user.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Visual Structure</h3>
+                <p style="font-size: 15px;">Replacing rounded corners with clean, sharp edges provides a structured viewing experience that respects the content.</p>
+            </div>
+            <div class="feature-box" style="grid-column: span 2;">
+                <h3>Privacy First</h3>
+                <p style="font-size: 15px;">Built on the principle of local operation, ClassicTube never tracks you. Your data belongs to you, not the server.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>The TITAN Odyssey</h2>
+        <p>
+            My creative journey doesn't stop at browser extensions. <strong>TITAN</strong>, a cinematic manga-animation project set in the dystopian years of 2089 and 2599, is currently in development. This project explores the same themes of reconstruction and visual storytelling that fuel ClassicTube.
+        </p>
+        <p>
+            Every bit of support for ClassicTube directly empowers the research and world-building of TITAN. We are merging the aesthetic codes of the internet’s Golden Age with the creative speed of today to build a new cinematic future.
+        </p>
+    </
