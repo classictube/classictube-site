@@ -45,6 +45,20 @@
 
         /* Sol Panel */
         .restore-panel { padding: 40px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; }
+        
+        /* Görselleştirme Alanı (Before/After) */
+        .comparison-hero {
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+            background: #000;
+            padding: 10px;
+        }
+        .comparison-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .restore-panel .pre-title { color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;}
         h1 { font-size: 32px; font-weight: 900; margin-bottom: 15px; letter-spacing: -1.5px; line-height: 1.1;}
         .main-tagline { font-style: italic; color: #ccc; font-size: 11px; margin-bottom: 15px;}
@@ -131,6 +145,10 @@
     </header>
 
     <main class="restore-panel">
+        <div class="comparison-hero">
+            <img src="images/comparison.jpg" alt="Restoration Comparison">
+        </div>
+
         <span class="pre-title">Digital Restoration</span>
         <h1>Focus Reclaimed.</h1>
         <p class="main-tagline">"Simplicity is the ultimate sophistication."</p>
@@ -198,6 +216,7 @@
 
     <footer class="main-footer">
         Inquiries: <a href="mailto:support@classictube.io" class="contact-link">support@classictube.io</a> | 
+        <a href="about.html" class="contact-link" style="color: var(--primary-red); font-weight: bold;">About</a> |
         <a href="privacy.html" class="contact-link" style="color: var(--primary-red); font-weight: bold;">Privacy Policy</a> | 
         © 2026 ClassicTube & TITAN Project
     </footer>
